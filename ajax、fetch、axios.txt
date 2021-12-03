@@ -1,0 +1,5 @@
+原生ajax的封装去请求，容易造成回调地狱，
+在jquery中封装ajax,封装得比较好，但在前端框架中，为了一个ajax,去引入一个体积庞大得jquery，非常不利于性能，
+axios，支持在浏览器端和node端，支持promise,支持并发请求，是原生xhr的封装。
+fetch是es6的最新规范，是基于pormise的，原生js编写，浏览器原生支持，因此比较底层，很多操作和方法需要自己手动封装。
+在接收到一个代表错误的状态码时，fetch返回的promise的状态仍然时resolve状态，只是把状态数据从ok改成false.只有网络故障或者请求被阻止时，才会被标记为reject状态。默认情况下，fetch不会向服务器接受或者发送cookie，要发生cookie，必须设置credentials.
